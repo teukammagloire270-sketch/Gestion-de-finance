@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ----- Carte principale ----- */
+.container {
+  display: flex;
+  width: 430px;
+  max-width: 100%;
+  height: 255px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+              0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* ----- Partie gauche ----- */
+.form-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.form-container form {
+  width: 100%;
+  padding: 0 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 14px;
+}
+
+.form-container input {
+  width: 100%;
+  background: #eeeeee;
+  border: none;
+  padding: 8px 10px;
+  margin: 6px 0;
+  font-size: 9px;
+  outline: none;
+}
+
+.form-container input:focus {
+  background: #e4e4e4;
+}
+
+.forgot {
+  font-size: 9px;
+  color: #333;
+  text-decoration: none;
+  margin: 12px 0 8px;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* ----- Boutons ----- */
+.btn-main {
+  border: none;
+  border-radius: 20px;
+  background: #ff4b2b;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 9px 28px;
+  cursor: pointer;
+  transition: transform 80ms ease-in;
+}
+
+.btn-main:active {
+  transform: scale(0.95);
+}
+
+.btn-ghost {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 9px 28px;
+  transition: transform 80ms ease-in;
+}
+
+.btn-ghost:active {
+  transform: scale(0.95);
+}
+
+/* ----- Partie droite (dégradé rose) ----- */
+.overlay-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  color: #ffffff;
+  background: linear-gradient(to right, #ff4b7e, #ff44c0);
+}
+
+.overlay-container h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.overlay-container p {
+  font-size: 9px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+/* ----- Petits écrans ----- */
+@media (max-width: 460px) {
+  .container {
+    height: auto;
+    flex-direction: column;
+  }
+  .form-container,
+  .overlay-container {
+    width: 100%;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+}
